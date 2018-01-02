@@ -3,13 +3,13 @@
     "header": {
         "logo": {
           "link": "http://www.csssr.ru",
-          "img": "../img/logo.png"
+          "img": "/assets/images/logo.png"
         },
         "cliche":{
-          "img": "../img/cliche.png"
+          "img": "/assets/images/cliche.png"
         },
         "main_title":{
-          "img": "../img/main_title.png"
+          "img": "/assets/images/main_title.png"
         }
 
 
