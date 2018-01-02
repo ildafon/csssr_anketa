@@ -1,0 +1,11 @@
+mixin header(data)
+	+b.header
+		+e.top.clearfix
+			+b.logo
+				+e.link(href='#{data.header.logo.link}')
+					+e.img(src='#{data.header.logo.img}')
+			+b.cliche
+				+e.img(src= '#{data.header.cliche.img}')
+		+e.middle
+			+b.main-title
+				+e.img(src= '#{data.header.main_title.img}')
