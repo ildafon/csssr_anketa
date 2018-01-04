@@ -2,10 +2,12 @@ include /../node_modules/bemto.jade/bemto
 include /../node_modules/jade-injected/jade-injected
 include ../page/page
 include ../scripts/scripts
+include ../profile/profile
 
 doctype html
 html(lang='ru')
 	include ../head/head
 	+page
-		block content
+		+profile
+			block content
 		+scripts(['app.min.js'])

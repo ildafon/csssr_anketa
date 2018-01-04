@@ -1,6 +1,6 @@
 extends /blocks/layout-default/layout-default
 include ../blocks/header/header
-
+include ../blocks/form/form
 
 block head
 	- var pageTitle = 'CSSSR Project Template';
@@ -8,3 +8,6 @@ block head
 block content
 	- var data = getData('profile.json')
 	+header(data)
+	+form(data)
+
+

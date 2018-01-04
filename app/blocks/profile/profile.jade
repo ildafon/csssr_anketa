@@ -1,7 +1,5 @@
-mixin profile()
-	+b.profile&attributes(attributes)
-		+e.header
-			block header
-				include ../header/header
-		+e.form
-			block form
+
+mixin profile(data)
+	+b.profile
+		+e('section').page
+			block content
