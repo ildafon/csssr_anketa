@@ -12,20 +12,22 @@
 
 .field__label--checkbox
 	position relative
-
 	display inline-block
-	// white-space: nowrap;
+
 	padding-left 1.3em
 
 
 	&:before
 		content ''
+
 		position absolute
 		top .5em
 		left .05em
+
 		display inline-block
 		width .9em
 		height .85em
+
 		sprite $checkbox
 		// background-image url('../img/checkbox.png')
 		// background-repeat no-repeat
@@ -35,14 +37,17 @@
 
 	&:after
 		content ''
+
 		position absolute
-		opacity 0
 		top .1em
 		left .2em
+
 		display inline-block
 		width .91em
 		height 1.17em
+
 		sprite $sign
+		opacity 0
 		// background-image url("../img/sign.png")
 		// background-repeat no-repeat
 		// background-position 50% 50%
@@ -52,6 +57,7 @@
 
 .field--checkbox-last
 	line-height 1.1em
+
 	padding-top .35em
 
 	& .field__label--checkbox:before
