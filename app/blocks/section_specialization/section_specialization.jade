@@ -1,0 +1,85 @@
+- var data = getData('profile.json')
++b.section
+	+e.title--specialization= `${data.form.specialization.title}`
+	+e.description--specialization= `${data.form.specialization.description}`
+	+e.column--col1
+		+b.field--checkbox
+			+e('input').value--checkbox(type="checkbox" name="specialization" value="bem" id="specialization__bem" )
+			+e('label').label--checkbox.font__label.font__label--checkbox(for="specialization__bem" )= `${data.form.specialization.fields.bem.label}`
+
+		+b.field--checkbox
+			+e('input').value--checkbox(type="checkbox" name="specialization" value="pug-jade" id="specialization__pug-jade" )
+			+e('label').label--checkbox.font__label.font__label--checkbox(for="specialization__pug-jade" )= `${data.form.specialization.fields.pug_jade.label}`
+
+		+b.field--checkbox
+			+e('input').value--checkbox(type="checkbox" name="specialization" value="stylus-less-sass" id="specialization__stylus-less-sass")
+			+e('label').label--checkbox.font__label.font__label--checkbox(for="specialization__stylus-less-sass")= `${data.form.specialization.fields.stylus_less_sass.label}`
+
+		+b.field--checkbox
+			+e('input').value--checkbox(type="checkbox" name="specialization" value="svg" id="specialization__svg")
+			+e('label').label--checkbox.font__label.font__label--checkbox(for="specialization__svg")= `${data.form.specialization.fields.svg.label}`
+
+		+b.field--checkbox
+			+e('input').value--checkbox(type="checkbox" name="specialization" value="semantic-layout" id="specialization__semantic-layout" )
+			+e('label').label--checkbox.font__label.font__label--checkbox(for="specialization__semantic-layout")= `${data.form.specialization.fields.semantic_layout.label}`
+
+		+b.field--checkbox
+			+e('input').value--checkbox(type="checkbox" name="specialization" value="accessibility" id="specialization__accessibility")
+			+e('label').label--checkbox.font__label.font__label--checkbox(for="specialization__accessibility")= `${data.form.specialization.fields.accessibility.label}`
+
+		+b.field--checkbox
+			+e('input').value--checkbox(type="checkbox" name="specialization" value="es2015-es2016" id="specialization__es2015-es2016" )
+			+e('label').label--checkbox.font__label.font__label--checkbox(for="specialization__es2015-es2016")= `${data.form.specialization.fields.es2015_es2016.label}`
+
+	+e.column--col2
+
+		+b.field--checkbox
+			+e('input').value--checkbox(type="checkbox" name="specialization" value="gulp-grant" id="specialization__gulp-grant" )
+			+e('label').label--checkbox.font__label.font__label--checkbox(for="specialization__gulp-grant")= `${data.form.specialization.fields.gulp_grunt.label}`
+
+		+b.field--checkbox
+			+e('input').value--checkbox(type="checkbox" name="specialization" value="webpack" id="specialization__webpack" )
+			+e('label').label--checkbox.font__label.font__label--checkbox(for="specialization__webpack")= `${data.form.specialization.fields.webpack.label}`
+
+		+b.field--checkbox
+			+e('input').value--checkbox(type="checkbox" name="specialization" value="webgl" id="specialization__webgl" )
+			+e('label').label--checkbox.font__label.font__label--checkbox(for="specialization__webgl")= `${data.form.specialization.fields.webgl.label}`
+
+		+b.field--checkbox
+			+e('input').value--checkbox(type="checkbox" name="specialization" value="jquery" id="specialization__jquery" )
+			+e('label').label--checkbox.font__label.font__label--checkbox(for="specialization__jquery")= `${data.form.specialization.fields.jquery.label}`
+
+		+b.field--checkbox
+			+e('input').value--checkbox(type="checkbox" name="specialization" value="angular" id="specialization__angular" )
+			+e('label').label--checkbox.font__label.font__label--checkbox(for="specialization__angular")= `${data.form.specialization.fields.angular.label}`
+
+		+b.field--checkbox
+			+e('input').value--checkbox(type="checkbox" name="specialization" value="react" id="specialization__react" )
+			+e('label').label--checkbox.font__label.font__label--checkbox(for="specialization__react")= `${data.form.specialization.fields.react.label}`
+
+		+b.field--checkbox
+			+e('input').value--checkbox(type="checkbox" name="specialization" value="nodejs" id="specialization__nodejs")
+			+e('label').label--checkbox.font__label.font__label--checkbox(for="specialization__nodejs")= `${data.form.specialization.fields.nodejs.label}`
+
+	+e.column--col3
+
+		+b.field--checkbox
+			+e('input').value--checkbox(type="checkbox" name="specialization" value="git" id="specialization__git" )
+			+e('label').label--checkbox.font__label.font__label--checkbox(for="specialization__git")= `${data.form.specialization.fields.git.label}`
+
+		+b.field--checkbox
+			+e('input').value--checkbox(type="checkbox" name="specialization" value="precision" id="specialization__precision" )
+			+e('label').label--checkbox.font__label.font__label--checkbox(for="specialization__precision")= `${data.form.specialization.fields.precision.label}`
+
+		+b.field--checkbox
+			+e('input').value--checkbox(type="checkbox" name="specialization" value="blog-csssr-ru" id="specialization__blog-csssr-ru" )
+			+e('label').label--checkbox.font__label.font__label--checkbox(for="specialization__blog-csssr-ru")= `${data.form.specialization.fields.blog_csssr_ru.label}`
+				+b.field__link(href="http://blog.csssr.ru/" target="_blank")= `${data.form.specialization.fields.blog_csssr_ru.link}`
+
+		+b.field--checkbox
+			+e('input').value--checkbox(type="checkbox" name="specialization" value="lazy" id="specialization__lazy" )
+			+e('label').label--checkbox.font__label.font__label--checkbox(for="specialization__lazy")= `${data.form.specialization.fields.lazy.label}`
+
+		+b.field--checkbox.field--checkbox-last
+			+e('input').value--checkbox(type="checkbox" name="specialization" value="english" id="specialization__english")
+			+e('label').label--checkbox.font__label.font__label--checkbox(for="specialization__english")= `${data.form.specialization.fields.english.label}`

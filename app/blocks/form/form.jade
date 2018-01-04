@@ -1,35 +1,18 @@
+- set_bemto_settings({modifier: '--'})
 mixin form(data)
-	+b('form').form(action="json.txt" id="candidate" enctype="multipart/form-data")
-		+e('fieldset').section_person(name= '#{data.form.person.name}')
-			block person
-				+b.fieid_text
-					+e('label').label_text.font__label.font__label_text(for='person__fullname')= `${data.form.person.fields.fullname.label}`
-					+e('input').__input_text.field__input_fullname.font__input_text(type="text" name="fullname" id="person__fullname" required)
+	+b('form').form.profile__form(action="json.txt" id="candidate" enctype="multipart/form-data")
+		+e('fieldset').section.__section--person(name= '#{data.form.person.name}')
+			include ../section_person/section_person
 
-				+b.fieid_text
-					+e('label').label_text.font__label.font__label_text(for='person__birth-year')= `${data.form.person.fields.birth_year.label}`
-					+e('input').__input_text.field__input_fullname.font__input_text(type="text" size="10%" min="1900" value="1990" max="2017" name="birth-year" id="person__birth-year" required)
+		+e('fieldset').section--specialization
+			include ../section_specialization/section_specialization
 
-				+b.fieid_text
-					+e('label').label_text.font__label.font__label_text(for='person__location')= `${data.form.person.fields.location.label}`
-					+e('input').__input_text.field__input_fullname.font__input_text(type="text" name="location" id="person__location" required )
+		+e('fieldset').section--javascript-skill
 
-				+b.fieid_text
-					+e('label').label_text.font__label.font__label_text(for='person__skype')= `${data.form.person.fields.skype.label}`
-					+e('input').__input_text.field__input_fullname.font__input_text(type="text" name="skype" id="person__skype")
+		+e('fieldset').section--about-yourself
 
-				+b.fieid_text
-					+e('label').label_text.font__label.font__label_text(for='person__email')= `${data.form.person.fields.email.label}`
-					+e('input').__input_text.field__input_fullname.font__input_text(type="email"   name="email" id="person__email" required )
+		+e('fieldset').section--roadmap
 
-		+e('fieldset').section_specialization
-
-		+e('fieldset').section_javascript-skill
-
-		+e('fieldset').section_about-yourself
-
-		+e('fieldset').section_roadmap
-
-		+e('fieldset').section_profile-creation-date
+		+e('fieldset').section--profile-creation-date
 
 		+e('input').submit(type='submit' id='submit_button' value='Save' style={'display':'none'})

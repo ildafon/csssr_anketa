@@ -1,0 +1,22 @@
+- set_bemto_settings({modifier: '--'})
+- var data = getData('profile.json')
+	+b.field--text
+		+e('label').label--text.font__label.font__label--text(for='person__fullname')= `${data.form.person.fields.fullname.label}`
+		+e('input').__input--text.field__input--fullname.font__input.font__input--text(type="text" name="fullname" id="person__fullname" required)
+
+	+b.field--text
+		+e('label').label_text.font__label.font__label_text(for='person__birth-year')= `${data.form.person.fields.birth_year.label}`
+		+e('input').__input--text.field__input--birth_year.font__input.font__input--text(type="text" size="10%"  name="birth-year" id="person__birth-year" required)
+
+	+b.field--text
+		+e('label').label_text.font__label.font__label_text(for='person__location')= `${data.form.person.fields.location.label}`
+		+e('input').__input--text.field__input--location.font__input.font__input--text(type="text" name="location" id="person__location" required )
+
+	+b.field--text
+		+e('label').label--text.font__label.font__label--text(for='person__skype')= `${data.form.person.fields.skype.label}`
+		+e('input').__input--text.field__input--skype.font__input.font__input--text(type="text" name="skype" id="person__skype")
+
+	+b.field--text
+		+e('label').label--text.font__label.font__label--text(for='person__email')= `${data.form.person.fields.email.label}`
+		+e('input').__input--text.field__input--email.font__input.font__input--text(type="email"   name="email" id="person__email" required )
+
