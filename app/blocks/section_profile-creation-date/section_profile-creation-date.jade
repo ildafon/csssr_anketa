@@ -1,0 +1,5 @@
+- var data = getData('profile.json')
+
++b.field--date
+	+e('label').label--date.font__label.font__label--text(for="profile-creation-date")= `${data.form.profile_creation_date.fields.profile_creation_date.label}`
+	+e('input').input--date.font__input--text(type="text" name="profile-creation-date" id="profile-creation-date" value="01.01.2016" )

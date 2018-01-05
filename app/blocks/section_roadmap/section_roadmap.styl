@@ -1,0 +1,56 @@
+.field--radio
+	position relative
+
+	display inline-block
+	height 2.3em
+
+	line-height 2.3em
+	vertical-align center
+
+	margin-right .65em
+
+
+.field__input--radio
+	display none
+
+
+.field__label--radio
+	display inline-block
+
+	vertical-align center
+
+	margin-left 1.7em
+
+	&:before
+		content ''
+
+		position absolute
+		left -.5em
+
+		display inline-block
+		width 2.3em
+		height 100%
+		line-height 2.3em
+		vertical-align center
+
+		sprite $radio
+
+
+	&:after
+		content ''
+
+		position absolute
+		top .65em
+		left -.05em
+
+		display inline-block
+		width 1.4em
+		height 1.4em
+
+		vertical-align bottom
+		sprite $radio_dot
+		opacity 0
+
+
+.field__input--radio:checked ~  .field__label--radio:after
+	opacity 1

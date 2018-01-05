@@ -1,0 +1,6 @@
+- var data = getData('profile.json')
++b.section
+	+e.title--about-youself= `${data.form.about_youself.title}`
+	+e.description--about-youself= `${data.form.about_youself.description}`
+	+e.textarea
+		+b('textarea').field__input--textarea.font__input--text(form="candidate" name="about-youself")
