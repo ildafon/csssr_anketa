@@ -325,6 +325,7 @@ function Slider(name, value, min, max) {
 }
 
 
+
 const sliderJs = new Slider('jslevel');
 sliderJs.attachToParent(document.querySelector('.sl-place'));
 

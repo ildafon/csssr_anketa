@@ -33,7 +33,11 @@
 		line-height 2.3em
 		vertical-align center
 
-		sprite $radio
+		// sprite $radio
+		background-image url('/radio.png')
+		background-repeat no-repeat
+		background-position 50% 50%
+		background-size contain
 
 
 	&:after
@@ -48,8 +52,14 @@
 		height 1.4em
 
 		vertical-align bottom
-		sprite $radio_dot
+
 		opacity 0
+
+		// sprite $radio_dot
+		background-image url('/radio-dot.png')
+		background-repeat no-repeat
+		background-position 50% 50%
+		background-size contain
 
 
 .field__input--radio:checked ~  .field__label--radio:after
