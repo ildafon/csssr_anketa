@@ -165,7 +165,7 @@ function Datalist(state){
 	return self;
 }
 
-function Label(optionObj, cols) {
+function Label(optionObj, cols, isLast) {
 	Object.setPrototypeOf( this, new HTMLElem() );
 
 	this.valueAttr = parseFloat(optionObj.htmlElem.getAttribute('value'));
@@ -176,7 +176,7 @@ function Label(optionObj, cols) {
 		html: this.labelAttr,
 		class: 'slider__label  font__label font__label--slider',
 		style: {
-			left: (this.valueAttr - 1.298) + '%',
+			left: (isLast) ? 'auto' : (this.valueAttr - 1.298) + '%',
 			'max-width': (cols > 0 ) ? ((100 / cols) + '%') : '100%'
 		}
 	});
@@ -235,9 +235,9 @@ function Input(state){
 
 function SliderState(name, value, min, max) {
 	this.name = (typeof name !== 'undefined') ? name : 'slider';
-	this.min = (typeof min !== 'undefined') ? min : parseInt('0', 10);
-	this.max = (typeof max !== 'undefined') ? max : parseInt('100', 10);
-	this.value = (typeof value !== 'undefined') ? value : this.min;
+	this.min = (typeof min !== 'undefined') ? parseInt(min, 10) : parseInt('0', 10);
+	this.max = (typeof max !== 'undefined') ? parseInt(max, 10) : parseInt('100', 10);
+	this.value = (typeof value !== 'undefined') ? parseInt(value, 10) : this.min;
 	this.posX = (this.value - this.min) / (this.max - this.min);
 
 }
@@ -273,8 +273,8 @@ function Slider(name, value, min, max) {
 	for (const key in this.datalistElem){
 		if (this.datalistElem.hasOwnProperty(key) && ( this.datalistElem[key].hasOwnProperty('htmlElem') )) {
 			const optionObj = this.datalistElem[key];
-			const valueAttr = optionObj.htmlElem.getAttribute('value');
-			this[key] = new Label(optionObj, cols);
+			const valueAttr = parseInt(optionObj.htmlElem.getAttribute('value'), 10);
+			this[key] = new Label(optionObj, cols, valueAttr === this.state.max);
 			if ((this.state.min < valueAttr) && (valueAttr < this.state.max)) {
 				this[key + 'Point'] = new LabelPoint(optionObj);
 			}
