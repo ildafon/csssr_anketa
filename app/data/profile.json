@@ -1,0 +1,287 @@
+{
+
+    "header": {
+        "logo": {
+          "link": "http://www.csssr.ru",
+          "img": "/assets/images/logo.png"
+        },
+        "cliche":{
+          "img": "/assets/images/cliche.png"
+        },
+        "main_title":{
+          "img": "/assets/images/main_title.png"
+        }
+
+
+        },
+
+    "form": {
+
+            "person": {
+              "name":"personal_info",
+              "title": "",
+              "description": "",
+              "fields": {
+                "fullname": {
+                  "type": "text",
+                  "id": "person__fullname",
+                  "label": "Полное ФИО",
+                  "value": ""
+                },
+                "birth_year": {
+                  "type": "text",
+                  "id": "person__birth_year",
+                  "label": "Год рождения",
+                  "value": ""
+                },
+                "location": {
+                  "type": "text",
+                  "id": "person__location",
+                  "label": "Место жительства",
+                  "value": ""
+                },
+                "skype": {
+                  "type": "text",
+                  "id": "person__skype",
+                  "label": "Скайп",
+                  "value": ""
+                },
+                "email": {
+                  "type": "text",
+                  "id": "person__email",
+                  "label": "Почта",
+                  "value": ""
+                }
+              }
+            },
+
+            "specialization": {
+              "title":"Расскажите о себе чекбоксами",
+              "description":"Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это озночает, что вы будете получать те задачи, с которыми гарантировано будете справляться.",
+              "fields": {
+
+                "bem": {
+                  "name": "specialization",
+                  "type": "checkbox",
+                  "id": "specialization__bem",
+                  "label": "БЭМ/OOCSS",
+                  "value": "bem"
+                },
+                "pug_jade": {
+                  "name": "specialization",
+                  "type": "checkbox",
+                  "id": "specialization__pug-jade",
+                  "label": "Pug (Jade)",
+                  "value": "pug-jade"
+                },
+                "stylus_less_sass": {
+                  "name": "specialization",
+                  "type": "checkbox",
+                  "id": "specialization__stylus-less-sass",
+                  "label": "Stylus/LESS/SASS",
+                  "value": "stylus-less-sass"
+                },
+                "svg":  {
+                  "name": "specialization",
+                  "type": "checkbox",
+                  "id": "specialization__svg",
+                  "label": "Работаю с SVG",
+                  "value": "svg"
+                },
+                "semantic_layout":  {
+                  "name": "specialization",
+                  "type": "checkbox",
+                  "id": "specialization__semantic-layout",
+                  "label": "Верстаю семантично",
+                  "value": "semantic-layout"
+                },
+                "accessibility":  {
+                  "name": "specialization",
+                  "type": "checkbox",
+                  "id": "specialization__accessibility",
+                  "label": "Accessibility (A11Y)",
+                  "value": "accessibility"
+                },
+                "es2015_es2016":  {
+                  "name": "specialization",
+                  "type": "checkbox",
+                  "id": "specialization__es2015-es2016",
+                  "label": "ES2015/ES2016",
+                  "value": "es2015-es2016"
+                },
+                "gulp_grunt":  {
+                  "name": "specialization",
+                  "type": "checkbox",
+                  "id": "specialization__gulp-grunt",
+                  "label": "Gulp/GRUNT",
+                  "value": "gulp-grunt"
+                },
+                "webpack":  {
+                  "name": "specialization",
+                  "type": "checkbox",
+                  "id": "specialization__webpack",
+                  "label": "Webpack",
+                  "value": "webpack"
+                },
+                "webgl":  {
+                  "name": "specialization",
+                  "type": "checkbox",
+                  "id": "specialization__webgl",
+                  "label": "Дружу с WebGL",
+                  "value": "webgl"
+                },
+                "jquery":{
+                  "name": "specialization",
+                  "type": "checkbox",
+                  "id": "specialization__jquery",
+                  "label": "jQuery",
+                  "value": "jquery"
+                },
+                "angular": {
+                  "name": "specialization",
+                  "type": "checkbox",
+                  "id": "specialization__angular",
+                  "label": "Знаю/изучаю Angular",
+                  "value": "angular"
+                },
+                "react":{
+                  "name": "specialization",
+                  "type": "checkbox",
+                  "id": "specialization__react",
+                  "label": "Знаю/изучаю React",
+                  "value": "react"
+                },
+                "nodejs": {
+                  "name": "specialization",
+                  "type": "checkbox",
+                  "id": "specialization__nodejs",
+                  "label": "Знаю/изучаю Node.js",
+                  "value": "nodejs"
+                },
+                "git":  {
+                  "name": "specialization",
+                  "type": "checkbox",
+                  "id": "specialization__git",
+                  "label": "Использую Git",
+                  "value": "git"
+                },
+                "precision":  {
+                  "name": "specialization",
+                  "type": "checkbox",
+                  "id": "specialization__precision",
+                  "label": "С глазомером все ok",
+                  "value": "precision"
+                },
+                "blog_csssr_ru":  {
+                  "name": "specialization",
+                  "type": "checkbox",
+                  "id": "specialization__blog-csssr-ru",
+                  "label": "Читаю ",
+                  "link": "blog.csssr.ru",
+                  "value": "blog-csssr-ru"
+                },
+                "lazy": {
+                  "name": "specialization",
+                  "type": "checkbox",
+                  "id": "specialization__lazy",
+                  "label": "Я ленивый(-ая)",
+                  "value": "lazy"
+                },
+                "english": {
+                  "name": "specialization",
+                  "type": "checkbox",
+                  "id": "specialization__english",
+                  "label": "У меня хороший английский",
+                  "value": "english"
+                }
+}
+            },
+
+            "javascript_skill":{
+              "title": "Уровень владения JavaScript",
+              "description": "",
+              "fields": {
+                    "none": {
+                      "option":"none",
+                      "label": "Не владею"
+                    },
+                    "product_user": {
+                      "option":"product-user",
+                      "label": "Использую готовые решения"
+                    },
+                    "product_customizator": {
+                      "option":"product-customizator",
+                      "label": "Использую готовые решения и умею их переделывать"
+                    },
+                    "product_creator": {
+                      "option":"product-creator",
+                      "label": "Пишу сложный JS с нуля"
+                    }
+              }
+            },
+
+            "about_youself": {
+              "title": "Расскажите о себе словами",
+              "description": "Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.",
+              "fields": {
+                "about_youself": {
+                  "name": "about-youself",
+                  "form": "candidate",
+                  "rows": "3",
+                  "type": "textarea"
+                }
+              }
+            },
+
+            "roadmap":{
+              "title":"Какие у вас планы на будущее?",
+              "description":"Этот ответ ни на что не повлияет. Ни беда, если в будущем ваши планы поменяются.",
+              "fields": {
+                "layout": {
+                  "name": "roadmap",
+                  "type": "radio",
+                  "id": "roadmap__layout",
+                  "label": "Верстать",
+                  "value": "layout"
+                },
+                "js": {
+                  "name": "roadmap",
+                  "type": "radio",
+                  "id": "roadmap__js",
+                  "label": "Прокачиваться в JS",
+                  "value": "js"
+                },
+                "manager": {
+                  "name": "roadmap",
+                  "type": "radio",
+                  "id": "roadmap__manager",
+                  "label": "Менеджерство",
+                  "value": "manager"
+                },
+                "other": {
+                  "name": "roadmap",
+                  "type": "radio",
+                  "id": "roadmap__other",
+                  "label": "Другое",
+                  "value": "other"
+                }
+              }
+            },
+
+            "profile_creation_date":{
+              "title":"",
+              "description":"",
+              "fields": {
+                "profile_creation_date": {
+                  "name": "profile-creation-date",
+                  "type": "date",
+                  "id": "profile-creation-date",
+                  "label": "Дата заполнения",
+                  "value": ""
+                }
+              }
+            }
+          }
+
+}
+

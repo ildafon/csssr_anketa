@@ -1,0 +1,22 @@
+- set_bemto_settings({modifier: '--'})
+mixin form(data)
+	+b('form').form.profile__form(action="json.txt" id="candidate" enctype="multipart/form-data")
+		+e('fieldset').section.__section--person(name= '#{data.form.person.name}')
+			include ../section_person/section_person
+
+		+e('fieldset').section--specialization
+			include ../section_specialization/section_specialization
+
+		+e('fieldset').section--javascript-skill
+			include ../section_javascript-skill/section_javascript-skill
+
+		+e('fieldset').section--about-yourself
+			include ../section_about-yourself/section_about-yourself
+
+		+e('fieldset').section--roadmap
+			include ../section_roadmap/section_roadmap
+
+		+e('fieldset').section--profile-creation-date
+			include ../section_profile-creation-date/section_profile-creation-date
+
+		+e('input').submit(type='submit' id='submit_button' value='Save' style={'display':'none'})

@@ -1,0 +1,12 @@
+mixin header(data)
+	+b.header.profile__header
+		+e.top
+			+b.logo.header__logo
+				+e.link(href='#{data.header.logo.link}')
+					+e('img').img
+
+			+b.cliche.header__cliche
+				+e('img').img
+		+e.middle
+			+b.main-title
+				+e('img').img

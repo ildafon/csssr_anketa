@@ -11,3 +11,4 @@ gulp.task('copy', () => (
 		.pipe(gulpIf(!INCLUDE_ROBOTS, filter(file => !/resources[\\\/]robots\.txt/.test(file.path))))
 		.pipe(gulp.dest('dist'))
 ));
+

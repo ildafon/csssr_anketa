@@ -1,0 +1,20 @@
+- var data = getData('profile.json')
++b.section
+	+e.title--roadmap= `${data.form.roadmap.title}`
+	+e.description--roadmap= `${data.form.roadmap.description}`
+
+	+b.field--radio
+		+e('input').input--radio(type="radio" name="roadmap" id="roadmap__layout" value="layout" checked )
+		+e('label').label--radio.font__label--radio(for="roadmap__layout")= `${data.form.roadmap.fields.layout.label}`
+
+	+b.field--radio
+		+e('input').input--radio(type="radio" name="roadmap" id="roadmap__js" value="js")
+		+e('label').label--radio.font__label--radio(for="roadmap__js")= `${data.form.roadmap.fields.js.label}`
+
+	+b.field--radio
+		+e('input').input--radio(type="radio" name="roadmap" id="roadmap__manager" value="manager")
+		+e('label').label--radio.font__label--radio(for="roadmap__manager")= `${data.form.roadmap.fields.manager.label}`
+
+	+b.field--radio
+		+e('input').input--radio(type="radio" name="roadmap" id="roadmap__other" value="other")
+		+e('label').label--radio.font__label--radio(for="roadmap__other")= `${data.form.roadmap.fields.other.label}`
