@@ -62,9 +62,9 @@ HTMLElem.prototype.setHTMLElemProps = function (ElemProps) {
 };
 
 
-// HTMLElem.prototype.getHTMLElemProp = function (ElemProp) {
-// 	return this.htmlElem.getAttribute(ElemProp);
-// };
+HTMLElem.prototype.getHTMLElemProp = function (ElemProp) {
+	return this.htmlElem.getAttribute(ElemProp);
+};
 
 HTMLElem.prototype.attachToParent = function (parentElem) {
 	if (parentElem.nodeType === 1){
@@ -287,6 +287,7 @@ function Slider(name, value, min, max) {
 	this.inputElem.subscribe(that.publishValue, that.inputElem, that.inputElem.setState);
 
 	this.inputElem.addEventListener('change', function (event) {
+		event.preventDefault();
 		that.publishValue.deliver(that.state.setValue(event.target.value), that.publishValue);
 	});
 	this.addEventListener('click', function (event) {
@@ -329,3 +330,50 @@ function Slider(name, value, min, max) {
 const sliderJs = new Slider('jslevel');
 sliderJs.attachToParent(document.querySelector('.sl-place'));
 
+
+// Candidate
+function fillForm(json) {
+	const info = JSON.parse(json);
+	// console.log('info', info);
+	document.querySelector('.field__input--fullname').setAttribute('value', info.fullname[0]);
+	document.querySelector('.field__input--birth_year').setAttribute('value', info['birth-year'][0]);
+	document.querySelector('.field__input--location').setAttribute('value', info.location[0]);
+	document.querySelector('.field__input--skype').setAttribute('value', info.skype[0]);
+	document.querySelector('.field__input--email').setAttribute('value', info.email[0]);
+
+	info.specialization.forEach(function (item) {
+		const id = `specialization__${item}`;
+		document.getElementById(id).setAttribute('checked', 'true');
+	});
+
+	const sliderInput = document.querySelector('.slider__value');
+	sliderInput.value = Math.floor(info.jslevel[0]);
+	const valueChanged = new CustomEvent('change', {detail: 'change'});
+	sliderInput.dispatchEvent(valueChanged);
+
+	const textArea = document.querySelector('.field__input--textarea');
+	textArea.value = info['about-yourself'][0];
+
+	const keyUpEvent = new CustomEvent('keyup', {detail: 'keyup'});
+	textArea.dispatchEvent(keyUpEvent);
+
+	document.getElementById(`roadmap__${info.roadmap[0]}`).setAttribute('checked', 'true');
+	document.querySelector('.field__input--date').setAttribute('value', info['profile-creation-date'][0]);
+}
+
+const xhr = new XMLHttpRequest();
+xhr.open('GET', 'candidate.json', true);
+
+xhr.send();
+
+xhr.onreadystatechange = function () {
+	if (xhr.readyState !== 4){
+		return;
+	}
+
+	if (xhr.status !== 200) {
+		console.error( xhr.status + ': ' + xhr.statusText );
+	}else {
+		fillForm(xhr.responseText);
+	}
+};
