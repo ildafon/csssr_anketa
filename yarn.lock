@@ -1163,6 +1163,10 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
+bean@*:
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/bean/-/bean-1.0.15.tgz#b4a9fff82618b071471676c8b190868048c34775"
+
 beeper@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/beeper/-/beeper-1.1.1.tgz#e6d5ea8c5dad001304a70b22638447f69cb2f809"
@@ -1221,6 +1225,10 @@ bluebird@^2.3.2, bluebird@^2.9.26:
 bluebird@^3.0.5:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
+
+bonzo@*:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/bonzo/-/bonzo-2.0.0.tgz#a871618120acb62d891268377fff809162d159a0"
 
 boolbase@~1.0.0:
   version "1.0.0"
@@ -2238,6 +2246,10 @@ domhandler@2.3:
   dependencies:
     domelementtype "1"
 
+domready@*:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/domready/-/domready-1.0.8.tgz#91f252e597b65af77e745ae24dd0185d5e26d58c"
+
 domutils@1.4:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/domutils/-/domutils-1.4.3.tgz#0865513796c6b306031850e175516baf80b72a6f"
@@ -2318,6 +2330,10 @@ electron-to-chromium@^1.2.7:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.30.tgz#9666f532a64586651fc56a72513692e820d06a80"
   dependencies:
     electron-releases "^2.1.0"
+
+emile@*:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/emile/-/emile-1.0.5.tgz#ceb80a35847de588f9f8af1537cfe4fe73a38a42"
 
 emitter-steward@^1.0.0:
   version "1.0.0"
@@ -4257,6 +4273,15 @@ jade@~1.9.2:
     void-elements "~2.0.1"
     with "~4.0.0"
 
+jeesh@*:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/jeesh/-/jeesh-0.0.6.tgz#ddf68d5e28315d0f68832739232d695e5a82fcea"
+  dependencies:
+    bean "*"
+    bonzo "*"
+    domready "*"
+    qwery "*"
+
 jpeg-js@0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.0.4.tgz#06aaf47efec7af0b1924a59cd695a6d2b5ed870e"
@@ -5997,6 +6022,10 @@ quote-stream@~0.0.0:
     minimist "0.0.8"
     through2 "~0.4.1"
 
+qwery@*:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/qwery/-/qwery-4.0.0.tgz#7d21e3b4f7e9eed7e68728f4dab4de8b7303febe"
+
 randomatic@^1.1.3:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/randomatic/-/randomatic-1.1.7.tgz#c7abe9cc8b87c0baa876b19fde83fd464797e38c"
@@ -6542,6 +6571,13 @@ slash@^1.0.0:
 slice-ansi@0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/slice-ansi/-/slice-ansi-0.0.4.tgz#edbf8903f66f7ce2f8eafd6ceed65e264c831b35"
+
+slider@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/slider/-/slider-1.0.4.tgz#1ce825c3bac72308ae4d5628235c4d0d1688ece2"
+  dependencies:
+    emile "*"
+    jeesh "*"
 
 slug@^0.9.1:
   version "0.9.1"
